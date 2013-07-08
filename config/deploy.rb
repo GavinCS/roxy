@@ -66,6 +66,5 @@ namespace :deploy do
 
   after "deploy:assets:precompile", "deploy:reset_ownership"
 
-  after "deploy:restart", "delayed_job:restart"
 
 end
