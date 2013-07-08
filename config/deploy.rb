@@ -6,9 +6,11 @@ set :rails_env, "production" #added for delayed job
 set :application, "roxy"
 
 
+
 # Settings
 set :deploy_to, "/var/www/roxy.zando.co.za/"
 set :deploy_via, :remote_cache
+set :normalize_asset_timestamps, false
 # set :use_sudo, true
 default_run_options[:pty] = true
 set :ssh_options, { :forward_agent => true }
