@@ -9,7 +9,7 @@ class SubscriptionsController < ApplicationController
 
 
   def subscribe
-    @subscriber = ClearancePage.new(params[:clearancepage])
+    @subscriber = ClearancePage.new(params[:clearance_page])
 
     if @subscriber.save
       redirect_to root_path

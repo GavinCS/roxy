@@ -6,6 +6,6 @@ class ClearancePage < ActiveRecord::Base
    validates_presence_of [:firstname, :lastname, :email, :gender],  :message => "is required"
   validates :email, :format => EMAIL_REGEX
   validates :mobile, :format => { :with => /[0-9]{10,13}+/, :message => "only valid mobile numbers are allowed" }, :allow_blank => true
-  validates :source, :presence => false
+  validates :source, :presence => true
   validates_uniqueness_of :email, :case_sensitive => false , :message => "address is already subscribed"
 end
