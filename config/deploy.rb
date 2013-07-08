@@ -13,13 +13,13 @@ set :deploy_via, :remote_cache
 default_run_options[:pty] = true
 set :ssh_options, { :forward_agent => true }
 
-set :domain, "%SERVER%"
-set :user, "%USERNAME%"
+set :domain, "192.168.9.32"
+set :user, "root"
 server domain, :app, :web
 role :db, domain, :primary => true
 
 set :scm, :git
-set :repository, "%GIT REPOSITORY%"
+set :repository, "https://github.com/GavinCS/roxy"
 set :branch, "master"
 
 
