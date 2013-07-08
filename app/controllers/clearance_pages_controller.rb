@@ -4,12 +4,12 @@ require "uri"
 class ClearancePagesController < ApplicationController
  
   def index
-    @subscriber = Subscription.new
+    @subscriber = ClearancePage.new
   end
 
 
   def subscribe
-    @subscriber = Subscription.new(params[:subscription])
+    @subscriber = ClearancePage.new(params[:clearancepage])
 
     if @subscriber.save
       redirect_to root_path
