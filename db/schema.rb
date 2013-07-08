@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130705151423) do
+ActiveRecord::Schema.define(:version => 20130708114608) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -46,6 +46,17 @@ ActiveRecord::Schema.define(:version => 20130705151423) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
+  create_table "clearance_pages", :force => true do |t|
+    t.string   "email"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.integer  "gender"
+    t.string   "source"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "mobile"
+  end
+
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
     t.integer  "attempts",   :default => 0
@@ -57,17 +68,6 @@ ActiveRecord::Schema.define(:version => 20130705151423) do
     t.string   "locked_by"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
-  end
-
-  create_table "subscriptions", :force => true do |t|
-    t.string   "email"
-    t.string   "firstname"
-    t.string   "lastname"
-    t.integer  "gender"
-    t.string   "source"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "mobile"
   end
 
 end

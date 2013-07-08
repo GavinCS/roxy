@@ -1,7 +1,7 @@
 require "net/http"
 require "uri"
 
-class SubscriptionsController < ApplicationController
+class ClearancePagesController < ApplicationController
  
   def index
     @subscriber = Subscription.new
