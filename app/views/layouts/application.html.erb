@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Roxy</title>
+  <%= stylesheet_link_tag    "subscriptions", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body contenteditable="false">
+  
+<div id="wrapper">
+  
+
+     
+     <div id="banner"> 
+
+	 </div>
+  <div id="maincontent">
+
+         <% flash.each do |name, msg| %>
+  <div class="alert alert-<%= name == :notice ? "success" : "error" %>" id="notice">
+    <a class="close" data-dismiss="alert">*</a>
+    <%= msg %>
+  </div>
+<% end %>
+
+        <%= yield %>
+</div>       
+        
+        <div class="footer-container">
+        
+          <div id="footer_box">
+          <a href="http://www.zando.co.za/terms-of-use/" onclick="window.open(this.href,'Terms & Conditions','left=250,top=200,width=700,height=500,toolbar=1,resizable=1'); return false;"> *Terms and Conditions</a>     
+          </div>
+       </div>
+     
+       
+ 
+      
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+          $("div[id^='notice']").fadeOut(5000);
+});
+
+</script>
+</body>
+
+</html>
