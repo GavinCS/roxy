@@ -6,8 +6,8 @@ ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config.merge(:path => '')
 end
 
-  get "clearancestore" , :to => "clearance_pages#index"
-  post "subscribe", :to => "clearance_pages#subscribe"
-  root :to => 'clearance_pages#index'
+  get "clearancestore" , :to => "subscriptions#index"
+  post "subscribe", :to => "subscriptions#subscribe"
+  root :to => 'subscriptions#index'
 
 end

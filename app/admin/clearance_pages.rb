@@ -1,4 +1,5 @@
 ActiveAdmin.register ClearancePage do
+ 
  menu :priority => 2, :label => "Subscribers"
  
  # index do                              
