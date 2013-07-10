@@ -12,35 +12,38 @@
   <% end %>
 
   <div class="row-fluid">
-    <div class="span6">
+    <div class="span3"></div>
+    <div class="span4">
       <div class="control-group">
           <div class="controls">
-               <%= s.text_field :firstname , :class => 'input-xlarge', :id => 'formfield' ,:placeholder => 'Please enter your Firstname'%>
+               <%= s.text_field :firstname , :class => 'input-xlarge', :id => 'formfield' ,:placeholder => 'Firstname *'%>
           </div>    
           <div class="controls">
-               <%= s.text_field :lastname , :class => 'input-xlarge', :id => 'formfield' ,:placeholder => 'Please enter your Surname'%>
+               <%= s.text_field :lastname , :class => 'input-xlarge', :id => 'formfield' ,:placeholder => 'Surname *'%>
           </div>
       </div>
-    </div>
-    <div class="span6" >
+    
+    
       <div class="control-group">
           <div class="controls">
-           <%= s.text_field :email , :class => 'input-xlarge', :id => 'formfield' ,:placeholder => 'Please enter your email address'%>
+           <%= s.text_field :email , :class => 'input-xlarge', :id => 'formfield' ,:placeholder => 'email address *'%>
            <%= s.hidden_field :source, :value => 'clearancestore'  %>
           </div>
       </div>
       <div class="control-group">
           <div class="controls">
-           <%= s.text_field :mobile , :class => 'input-xlarge', :id => 'formfield' ,:placeholder => 'Please enter your mobile number'%>
+           <%= s.text_field :mobile , :class => 'input-xlarge', :id => 'formfield' ,:placeholder => 'Mobile number (optional)'%>
          
           </div>
       </div>
       </div>
   
-      </div><!-- END FLUID ROW -->
-
-      <div class="row-fluid">
-      <div class="span6" >
+      <div class="span4" >
+        <div class="control-group">
+          <div class="controls" >
+               <%= select_tag "clearance_page[marketing_media]" , options_for_select([["How Did You Hear About Us?",''],["Flier","Flier"],["Newspaper","Newspaper"],["Zando Newsletter","Zando Newsletter"],["Banners in Access Park","Banners in Access Park"],["I Just Passed By The Store","I Just Passed By The Store"],["Word of Mouth","Word of Mouth"],["other","other"]]), :id => "dropdwn", :include_blank => false  %>
+          </div>  
+        </div>
       <div class="control-group radio">
 
         <div class="controls" style="margin-bottom:10px;">
@@ -58,14 +61,15 @@
           </label>
         </div>
       </div>
-      </div>
-
-      <div class="span6" >
+     
+      
+      
     <div class="actions">
     <%= s.submit :value => 'Sign Up', :id => 'submit' %>
   </div>
-</div>
-</div> <!-- END FLUID ROW -->
+
+ </div>
+      </div><!-- END FLUID ROW -->
 
   
 <% end %>

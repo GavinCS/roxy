@@ -1,17 +1,20 @@
 ActiveAdmin.register ClearancePage do
  
  menu :priority => 2, :label => "Subscribers"
+
+ index :title => 'Subscriptions' do
  
- # index do                              
- #  column 'First Name' , :firstname   
- #  column 'Last Name' , :surname
- #  column 'Date of Birth' , :dob   
- #  column 'Gender' , :gender   
- #  column 'Email' , :email   
- #  column 'Mobile' , :mobile  
- #  column 'Region' , :region    
- #  column 'Interested in Sports' , :q2
- #  column 'Dependents under 16' , :q1    
- #  column 'New Subscriber' , :newsletter                       
- # end
+                           
+   column 'First Name' , :firstname   
+   column 'Last Name' , :lastname
+   column 'Gender' , :gender   
+   column 'Email' , :email   
+   column 'Mobile' , :mobile  
+   column 'source' , :source
+   column 'created', :created_at
+   default_actions
+  end
+
+  
 end
+
