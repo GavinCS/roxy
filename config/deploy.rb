@@ -16,7 +16,7 @@ default_run_options[:pty] = true
 set :ssh_options, { :forward_agent => true }
 
 set :domain, "192.168.1.192"
-set :user, "shop-subscriptions"
+set :user, "root"
 server domain, :app, :web
 role :db, domain, :primary => true
 

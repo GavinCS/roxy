@@ -13,7 +13,7 @@ class SubscriptionsController < ApplicationController
 
     if @subscriber.save
       redirect_to root_path
-      flash[:notice] = 'You have succesfully entered the competition.'
+      flash[:notice] = 'You have succesfully subscribed.'
       else
       render  :action => :index
     end
