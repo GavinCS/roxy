@@ -17,8 +17,7 @@ class SubscriptionsController < ApplicationController
       else
       render  :action => :index
     end
-
   end
 
-  
+    
 end
